@@ -11,5 +11,11 @@ namespace ProductReview.Models
         public string Name { get; set; }
         public Rating Rating { get; set; }
         public IList<Comment> Comments { get; set; }
+        public Product()
+        {
+            this.Comments = new List<Comment>();
+
+
+        }
     }
 }

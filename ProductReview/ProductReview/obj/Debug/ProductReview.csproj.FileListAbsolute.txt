@@ -63,3 +63,4 @@ C:\Users\stephen\Documents\Visual Studio 2013\Projects\Troop3\ProductReview\Prod
 C:\Users\stephen\Documents\Visual Studio 2013\Projects\Troop3\ProductReview\ProductReview\obj\Debug\ProductReview.pdb
 C:\Users\stephen\Documents\Visual Studio 2013\Projects\Troop3\ProductReview\ProductReview\obj\Debug\ProductReview.Migrations.newMigration.resources
 C:\Users\stephen\Documents\Visual Studio 2013\Projects\Troop3\ProductReview\ProductReview\obj\Debug\ProductReview.csproj.GenerateResource.Cache
+C:\Users\stephen\Documents\Visual Studio 2013\Projects\Troop3\ProductReview\ProductReview\obj\Debug\ProductReview.Migrations.yolo.resources

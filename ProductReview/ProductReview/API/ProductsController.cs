@@ -31,8 +31,12 @@ namespace ProductReview.API
         }
 
         // POST: api/Products
-        public void Post([FromBody]string value)
+        [Route("api/products/{id}")]
+        public void Post(int id, Comment comment)
         {
+            var product = _db.Products.Find(id);
+            product.Comments.Add(comment);
+            _db.SaveChanges();
         }
 
         // PUT: api/Products/5
