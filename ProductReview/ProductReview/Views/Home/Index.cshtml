@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp">
+<head>
+    <title></title>
+</head>
+<body ng-controller="ProductsController as main">
+
+    <ul>
+        <li ng-repeat="product in main.products">{{product.name}} - {{product.rating}}
+            <ul>
+                <li ng-repeat="comment in product.comments">{{comment.commentText}}</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/ngApp/app.js"></script>
+    <script src="~/ngApp/controllers.js"></script>
+    </body>
+</html>
