@@ -1,0 +1,18 @@
+﻿<div class="modal-header">
+    Edit Book
+</div>
+<div class="modal-body">
+
+    <form ng-submit="modal.editBook()">
+        <div>
+            <label>Title</label>
+            <input ng-model="modal.book.title" />
+        </div>
+        <div>
+            <label>Author</label>
+            <input ng-model="modal.book.author" />
+        </div>
+        <input type="submit" value="Save" />
+    </form>
+
+</div>

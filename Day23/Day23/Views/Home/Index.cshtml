@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="BookApp">
+<head>
+    <title></title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body ng-controller="BooksController as main">
+    <h1>{{main.taxes}}</h1>
+    <form ng-submit="main.createBook()">
+        <div>
+            <label>Title</label>
+            <input ng-model="main.book.title" />
+        </div>
+        <div>
+            <label>Author</label>
+            <input ng-model="main.book.author" />
+        </div>
+        <input type="submit" value="Submit" />
+    </form>
+
+
+    <ul>
+        <li ng-repeat="book in main.books">
+            {{book.title}} 
+            <a href="#" ng-click="main.showEditModal(book.id)">Edit</a> /
+            <a href="#" ng-click="main.remove(book)">Delete</a>
+        </li>
+    </ul>
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="~/Scripts/angular-resource.min.js"></script>
+
+
+    <script src="~/ngApp/app.js"></script>
+
+    <script src="~/ngApp/controllers.js"></script>
+    <script src="~/ngApp/services.js"></script>
+</body>
+</html>
+
+
