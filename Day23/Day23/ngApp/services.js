@@ -1,16 +1,16 @@
 ﻿(function () {
 
-    angular.module('BookApp').factory('taxService', function (booksControllerUrl, $resource) {
+    angular.module('BookApp').factory('taxService', ['booksControllerUrl', '$resource', function (booksControllerUrl, $resource) {
 
         return function (price) {
             return price * 0.08;
         };
 
-    });
+    }]);
 
 
 
-    angular.module('BookApp').factory('busyService', function (booksControllerUrl, $resource) {
+    angular.module('BookApp').factory('busyService', ['booksControllerUrl', '$resource', function (booksControllerUrl, $resource) {
 
         var _calculateTax = function (price) {
             return price * 0.08;
@@ -24,7 +24,7 @@
             calculateTax: _calculateTax,
             showCurrentTime: _showCurrentTime
         };
-    });
+    }]);
 
 
 })();

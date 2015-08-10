@@ -1,0 +1,13 @@
+﻿
+
+<ul>
+    <li ng-repeat="album in main.albums">
+        {{album.title}}
+        <a ng-click="main.showEditModal(album.id)">edit</a>
+        <a ng-click="main.showRemoveModal(album.id)">delete</a>
+    </li>
+
+</ul>
+
+<a ng-click="main.showCreateModal()">create</a>
+

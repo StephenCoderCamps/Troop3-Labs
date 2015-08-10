@@ -1,11 +1,12 @@
 ﻿(function () {
 
 
-    angular.module('BookApp').controller('BooksController', function ($modal, $resource, booksControllerUrl, taxService) {
+  function BooksController($modal, $resource, booksControllerUrl, taxService) {
         var self = this;
 
         self.taxes = taxService(3.44);
 
+        //self.rightNow = busyService.showCurrentTime();
 
         var Book = $resource(booksControllerUrl);
 
@@ -46,11 +47,14 @@
             });
         };
 
-    });
+    };
+
+  BooksController.$inject = ['$modal', '$resource', 'booksControllerUrl', 'taxService'];
+
+  angular.module('BookApp').controller('BooksController', BooksController);
 
 
-
-    angular.module('BookApp').controller('ModalController', function (id, $resource, $modalInstance, booksControllerUrl) {
+    angular.module('BookApp').controller('ModalController', ['id', '$resource', '$modalInstance', 'booksControllerUrl', function (id, $resource, $modalInstance, booksControllerUrl) {
         var self = this;
         var Book = $resource(booksControllerUrl);
         self.book = Book.get({ id: id });
@@ -61,7 +65,7 @@
             });
         };
 
-    });
+    }]);
 
 
 })();

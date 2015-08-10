@@ -1,0 +1,26 @@
+﻿<div class="modal-header">
+    <h1>Create New Album</h1>
+</div>
+<div class="modal-body">
+
+    <form ng-submit="modal.save()">
+        <div>
+            <label>Title</label>
+            <input ng-model="modal.album.title" />
+        </div>
+        <div>
+            <label>Genre</label>
+            <input ng-model="modal.album.genre" />
+        </div>
+        <div>
+            <label>Artist</label>
+            <input ng-model="modal.album.artist" />
+        </div>
+        <input type="submit" value="Save" />
+    </form>
+
+
+</div>
+<div class="modal-footer">
+
+</div>
